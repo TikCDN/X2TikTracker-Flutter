@@ -68,7 +68,8 @@ class X2TikTracker(private val channel: MethodChannel) :X2TikTrackerEventHandler
     }
 
     override fun onShareResult(code: TKT_CODE?) {
-        sendEvent(mapOf("event" to "onShareResult", "code" to code?.name))
+        sendEvent(mapOf("event" to "" +
+                "", "code" to code?.name))
     }
 
     override fun onTokenExpired() {
