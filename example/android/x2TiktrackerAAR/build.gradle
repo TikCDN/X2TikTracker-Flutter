@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('X2TikTracker-release.aar'))

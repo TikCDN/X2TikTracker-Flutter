@@ -1,0 +1,2 @@
+rootProject.name = 'x2tiktracker_flutter'
+include ':x2TiktrackerAAR'
