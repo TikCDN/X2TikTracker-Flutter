@@ -63,23 +63,11 @@ class X2TikTracker(private val channel: MethodChannel) :X2TikTrackerEventHandler
         sendEvent(mapOf("event" to "onPeerOn", "peerId" to peerId, "peerData" to peerData))
     }
 
-    override fun onRenewTokenResult(token: String, errorCode: RenewTokenErrCode?) {
-        sendEvent(mapOf("event" to "onRenewTokenResult", "token" to token, "errorCode" to errorCode?.name))
-    }
 
     override fun onShareResult(code: TKT_CODE?) {
         sendEvent(mapOf("event" to "" +
                 "", "code" to code?.name))
     }
-
-    override fun onTokenExpired() {
-        sendEvent(mapOf("event" to "onTokenExpired"))
-    }
-
-    override fun onTokenWillExpire() {
-        sendEvent(mapOf("event" to "onTokenWillExpire"))
-    }
-
 
     private fun sendEvent(eventData: Map<String, Any?>) {
         handler.post {
