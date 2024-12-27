@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh
+${BUILT_PRODUCTS_DIR}/video_player_avfoundation/video_player_avfoundation.framework
+${PODS_ROOT}/../.symlinks/plugins/x2tiktracker_flutter/ios/Framework/X2TikTracker.framework
+${BUILT_PRODUCTS_DIR}/x2tiktracker_flutter/x2tiktracker_flutter.framework

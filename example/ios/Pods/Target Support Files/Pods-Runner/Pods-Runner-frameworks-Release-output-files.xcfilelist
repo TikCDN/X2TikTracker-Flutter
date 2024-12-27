@@ -1,0 +1,3 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/video_player_avfoundation.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/X2TikTracker.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/x2tiktracker_flutter.framework
