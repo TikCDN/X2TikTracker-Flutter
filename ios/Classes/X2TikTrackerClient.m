@@ -110,21 +110,6 @@
     [self sendEvent:@{@"event": @"onPeerOff", @"peerId": peerId, @"peerData": peerData}];
 }
 
-- (void)onRenewTokenResult:(NSString *)token errorCode:(X2RenewTokenErrCode)errorCode {
-    /// token 续期结果回调
-    [self sendEvent:@{@"event": @"onRenewTokenResult", @"token": token, @"errorCode": @(errorCode)}];
-}
-
-- (void)onTokenWillExpired {
-    /// token 即将过期回调
-    [self sendEvent:@{@"event": @"onTokenWillExpire"}];
-}
-
-- (void)onTokenExpired {
-    /// token 已过期回调
-    [self sendEvent:@{@"event": @"onTokenExpired"}];
-}
-
 - (void)sendEvent:(NSDictionary *)eventData {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.channel invokeMethod:@"onEvent" arguments:eventData];
