@@ -67,6 +67,9 @@
     } else if ([@"removeListener" isEqualToString:call.method]) {
         [self.x2TikTracker removeListener];
         result(@"Listener Removed");
+    }  else if ([@"getVersion" isEqualToString:call.method]) {
+        NSString *version = [self.x2TikTracker getVersion];
+        result(version);
     } else {
         result(FlutterMethodNotImplemented);
     }
