@@ -42,6 +42,11 @@ class X2TikTracker(private val channel: MethodChannel) :X2TikTrackerEventHandler
         return x2TikTrackerEngine?.getExUrl().orEmpty()
     }
 
+    fun getVersion():String{
+        return x2TikTrackerEngine?.getExUrl().orEmpty()
+    }
+
+
     fun registerListener(){
         x2TikTrackerEngine?.registerListener(this)
     }
