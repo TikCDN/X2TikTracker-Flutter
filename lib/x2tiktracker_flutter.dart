@@ -49,6 +49,10 @@ class X2tiktrackerFlutter {
     return X2tiktrackerFlutterPlatform.instance.getExUrl();
   }
 
+  Future<String?> getVersion() {
+    return X2tiktrackerFlutterPlatform.instance.getVersion();
+  }
+
   Future<String?> removeListener() {
     return X2tiktrackerFlutterPlatform.instance.removeListener();
   }

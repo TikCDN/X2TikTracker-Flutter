@@ -49,6 +49,9 @@ abstract class X2tiktrackerFlutterPlatform extends PlatformInterface {
   Future<String?> getExUrl() {
     throw UnimplementedError('getExUrl() has not been implemented.');
   }
+  Future<String?> getVersion() {
+    throw UnimplementedError('getExUrl() has not been implemented.');
+  }
   Future<String?> removeListener() {
     throw UnimplementedError('removeListener() has not been implemented.');
   }

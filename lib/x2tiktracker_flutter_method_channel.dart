@@ -47,6 +47,11 @@ class MethodChannelX2tiktrackerFlutter extends X2tiktrackerFlutterPlatform {
   }
 
   @override
+  Future<String?> getVersion() async {
+    return await methodChannel.invokeMethod<String>('getVersion');
+  }
+
+  @override
   Future<int?> startShare() async {
     return await methodChannel.invokeMethod<int>('startShare');
   }
