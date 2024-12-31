@@ -62,10 +62,10 @@
         NSString *exUrl = [self.x2TikTracker getExUrl] ?: @"";
         result(exUrl);
     } else if ([@"registerListener" isEqualToString:call.method]) {
-        //[self.x2TikTracker registerListener];
+        [self.x2TikTracker registerListener];
         result(@"Listener Registered");
     } else if ([@"removeListener" isEqualToString:call.method]) {
-        //[self.x2TikTracker removeListener];
+        [self.x2TikTracker removeListener];
         result(@"Listener Removed");
     } else {
         result(FlutterMethodNotImplemented);
