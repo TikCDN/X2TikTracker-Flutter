@@ -1,6 +1,6 @@
 name: x2tiktracker_flutter
-description: A new Flutter project.
-version: 0.0.1
+description: P2P Streaming Engine for Flutter.
+version: 3.0.0
 homepage: https://github.com/TikCDN/X2TikTracker-Flutter
 
 environment:
