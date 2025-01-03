@@ -31,40 +31,69 @@
 }
 
 - (void)createWithAppid:(NSString *)appId {
+    [self releases];
     self.x2TikTrackerEngine = [[X2TikTrackerEngine alloc] initWithDelegate:self appId:appId];
 }
 
 - (void)releases {
-    [self.x2TikTrackerEngine release:YES];
-    self.x2TikTrackerEngine = nil;
+    if (self.x2TikTrackerEngine) {
+        [self.x2TikTrackerEngine release:YES];
+        self.x2TikTrackerEngine = nil;
+    }
 }
 
 - (NSInteger)startPlay:(NSString *)url share:(BOOL)share {
-    return [self.x2TikTrackerEngine startPlay:url share:share];
+    if (self.x2TikTrackerEngine) {
+        return [self.x2TikTrackerEngine startPlay:url share:share];
+    }
+    return -1;
 }
 
 - (NSInteger)stopPlay {
-    return [self.x2TikTrackerEngine stopPlay];
+    if (self.x2TikTrackerEngine) {
+        return [self.x2TikTrackerEngine stopPlay];
+    }
+    return -1;
 }
 
 - (NSInteger)startShare {
-    return [self.x2TikTrackerEngine startShare];
+    if (self.x2TikTrackerEngine) {
+        return [self.x2TikTrackerEngine startShare];
+    }
+    return -1;
 }
 
 - (NSInteger)stopShare {
-    return [self.x2TikTrackerEngine stopShare];
+    if (self.x2TikTrackerEngine) {
+        return [self.x2TikTrackerEngine stopShare];
+    }
+    return -1;
 }
 
 - (NSString *)getExUrl {
-    return self.x2TikTrackerEngine.getExPlayUrl;
+    if (self.x2TikTrackerEngine) {
+        return self.x2TikTrackerEngine.getExPlayUrl;
+    }
+    return @"";
 }
 
 - (void)registerListener {
-    self.x2TikTrackerEngine.delegate = self;
+    if (self.x2TikTrackerEngine) {
+        self.x2TikTrackerEngine.delegate = self;
+    }
 }
 
 - (void)removeListener {
-    self.x2TikTrackerEngine.delegate = nil;
+    if (self.x2TikTrackerEngine) {
+        self.x2TikTrackerEngine.delegate = nil;
+    }
+}
+
+- (NSString *)getVersion {
+    if (self.x2TikTrackerEngine) {
+        return [self.x2TikTrackerEngine getVersion];
+    }
+    return @"";
 }
 
 //MARK: - FlutterStreamHandler
